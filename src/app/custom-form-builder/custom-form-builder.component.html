@@ -1,0 +1,20 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <ng-container *ngFor="let control of jsonFormData?.controls">
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="">{{control.name}}</label>
+                <ng-container *ngIf="control.type != 'radio'">
+                    <input [type]="control.type" [formControlName]="control.name" [value]="control.value">
+                </ng-container>
+                <ng-container *ngIf="control.type == 'radio'">
+                    <label for="">{{control.name}}</label>
+                    <span *ngFor="let option of control.data index as index">
+                       
+                        <input [id]="index" name="{{control.name}}" [type]="control.type" [formControlName]="control.name" [value]="option.value">{{option.label}}
+                    </span>
+                </ng-container>
+            </div>
+        </div>
+    </ng-container> 
+    <button class="submit">Submit</button>
+</form>

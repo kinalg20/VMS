@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "-": "^0.0.1",
     "@angular/animations": "^14.0.0",
     "@angular/common": "^14.0.0",
     "@angular/compiler": "^14.0.0",
@@ -18,7 +19,14 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "angular-formio": "^4.11.5",
+    "bootstrap": "^5.2.0",
+    "core-js": "^3.24.1",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "ngx-bootstrap": "^9.0.0",
     "rxjs": "~7.5.0",
+    "save": "^2.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
