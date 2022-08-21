@@ -34,8 +34,8 @@ export class CustomFormBuilderComponent implements OnInit {
       },
       {
         name : "gender",
-        label : "Gender",
-        value :"M",
+        label : "gender",
+        value :"",
         type : "radio",
         required : true,
         data : [{label : 'Male' , value : 'M'} , {label : 'Female' , value : 'F'}],
@@ -109,10 +109,7 @@ export class CustomFormBuilderComponent implements OnInit {
             break;
         }
       }
-      this.myForm.addControl(
-        control.name,
-        this.fb.control(control.value, validatorsToAdd)
-      );
+      this.myForm.addControl(control.name,this.fb.control(control.value, validatorsToAdd));
     } 
   }
 
